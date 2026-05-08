@@ -4,6 +4,7 @@
   bubblewrap,
   cairo,
   cmake,
+  expat,
   fetchurl,
   flex,
   fontconfig,
@@ -99,6 +100,7 @@ stdenv.mkDerivation (finalAttrs: {
     at-spi2-core
     bubblewrap
     cairo
+    expat
     fontconfig
     freetype
     glib

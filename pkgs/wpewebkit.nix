@@ -61,7 +61,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "wpewebkit";
-  version = "2.50.4";
+  version = "2.52.3";
 
   outputs = [
     "out"
@@ -73,7 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://wpewebkit.org/releases/wpewebkit-${finalAttrs.version}.tar.xz";
-    hash = "sha256-0gTkBbCXVQh0jAJzwYCQMEqXnhFw/6KgpSj62QGR74c=";
+    hash = "sha256-tRsdsebumdF3H0o1jBKP3ieneYTfIO5stZhY5SBmLQs=";
   };
 
   nativeBuildInputs = [

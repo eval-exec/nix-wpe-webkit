@@ -15,6 +15,7 @@
   gperf,
   gst_all_1,
   harfbuzz,
+  hyphen,
   icu,
   lcms2,
   lib,
@@ -42,6 +43,7 @@
   mesa,
   ninja,
   p11-kit,
+  pcre2,
   perl,
   pkg-config,
   python3,
@@ -107,6 +109,7 @@ stdenv.mkDerivation (finalAttrs: {
     gst_all_1.gstreamer
     icu
     (harfbuzz.override { withIcu = true; })
+    hyphen
     lcms2
     libavif
     libdrm
@@ -130,6 +133,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     mesa
     p11-kit
+    pcre2
     sqlite
     systemd
     wayland

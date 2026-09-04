@@ -18,8 +18,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/.ghcup || true
+          sudo docker image prune -af || true
+
       - name: Install Nix
         uses: cachix/install-nix-action@v31
+
+      - name: Setup Cachix (read-only on PRs)
+        if: github.event_name == 'pull_request'
+        uses: cachix/cachix-action@v16
+        with:
+          name: nix-wpe-webkit
 
       - name: Setup Cachix
         if: github.event_name != 'pull_request'
